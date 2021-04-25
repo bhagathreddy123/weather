@@ -18,3 +18,9 @@ rails g model weather_station station_id:index latitude:float longitude:float el
 
  Scopes: we want to avoid putting business logic in the controller. Scopes have greatly simplified the controller. 
   another benfit of scopes is that the model now has some domain knowledge. it knows some questions the it will need to be able to answer. we can also ask those questions more easily. we can write tests to make sure that we get the results that we expect, and we can easily run the query in the Rails console.
+
+
+http://www.datavisualizationtoolkit.com
+https://github.com/DataVizToolkit/weather
+
+An API access token is required to use Mapbox.js. See https://www.mapbox.com/mapbox.js/api/v2.2.4/api-access-tokens/
