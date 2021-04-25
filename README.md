@@ -1,24 +1,16 @@
-# README
+NOAA Weather Readings
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app to visualize NOAA weather reading data.  The data can be found at:
+http://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_year
 
-Things you may want to cover:
 
-* Ruby version
+rails g model weather_reading station reading_date:date reading_type reading_value:integer measurement_flag  quality_flag source_flag observation_time:integer
 
-* System dependencies
+rails g model weather_station station_id:index latitude:float longitude:float elevation:float state name 
+      gsn_flag hcn_flag wmo_id
 
-* Configuration
+ rails g task seed
+ copy paste 1836.csv and ghcnd-stations.txt
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ bundle exec rake db:seed:import_noaa_weather
+ bundle exec rake db:seed:import_noaa_stations
