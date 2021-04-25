@@ -14,3 +14,7 @@ rails g model weather_station station_id:index latitude:float longitude:float el
 
  bundle exec rake db:seed:import_noaa_weather
  bundle exec rake db:seed:import_noaa_stations
+
+
+ Scopes: we want to avoid putting business logic in the controller. Scopes have greatly simplified the controller. 
+  another benfit of scopes is that the model now has some domain knowledge. it knows some questions the it will need to be able to answer. we can also ask those questions more easily. we can write tests to make sure that we get the results that we expect, and we can easily run the query in the Rails console.
